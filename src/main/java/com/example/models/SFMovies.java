@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * Author: <a href="mailto:lsk2008@msn.com">lvsike</a>
+ * Author: <a href="mailto:lsk2008@msn.com">sike,lv</a>
  * Date: 16-12-8 上午6:33
  */
 @Entity
@@ -17,17 +17,17 @@ public class SFMovies implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String Title;
-    private String ReleaseYear;
-    private String Locations;
-    private String FunFacts;
-    private String ProductionCompany;
-    private String Distributor;
-    private String Director;
-    private String Writer;
-    private String Actor1;
-    private String Actor2;
-    private String Actor3;
+    private String title;
+    private String releaseYear;
+    private String locations;
+    private String funFacts;
+    private String productionCompany;
+    private String distributor;
+    private String director;
+    private String writer;
+    private String actor1;
+    private String actor2;
+    private String actor3;
 
     public Long getId() {
         return id;
@@ -38,91 +38,91 @@ public class SFMovies implements Serializable {
     }
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
     public String getReleaseYear() {
-        return ReleaseYear;
+        return releaseYear;
     }
 
     public void setReleaseYear(String releaseYear) {
-        ReleaseYear = releaseYear;
+        this.releaseYear = releaseYear;
     }
 
     public String getLocations() {
-        return Locations;
+        return locations;
     }
 
     public void setLocations(String locations) {
-        Locations = locations;
+        this.locations = locations;
     }
 
     public String getFunFacts() {
-        return FunFacts;
+        return funFacts;
     }
 
     public void setFunFacts(String funFacts) {
-        FunFacts = funFacts;
+        this.funFacts = funFacts;
     }
 
     public String getProductionCompany() {
-        return ProductionCompany;
+        return productionCompany;
     }
 
     public void setProductionCompany(String productionCompany) {
-        ProductionCompany = productionCompany;
+        this.productionCompany = productionCompany;
     }
 
     public String getDistributor() {
-        return Distributor;
+        return distributor;
     }
 
     public void setDistributor(String distributor) {
-        Distributor = distributor;
+        this.distributor = distributor;
     }
 
     public String getDirector() {
-        return Director;
+        return director;
     }
 
     public void setDirector(String director) {
-        Director = director;
+        this.director = director;
     }
 
     public String getWriter() {
-        return Writer;
+        return writer;
     }
 
     public void setWriter(String writer) {
-        Writer = writer;
+        this.writer = writer;
     }
 
     public String getActor1() {
-        return Actor1;
+        return actor1;
     }
 
     public void setActor1(String actor1) {
-        Actor1 = actor1;
+        this.actor1 = actor1;
     }
 
     public String getActor2() {
-        return Actor2;
+        return actor2;
     }
 
     public void setActor2(String actor2) {
-        Actor2 = actor2;
+        this.actor2 = actor2;
     }
 
     public String getActor3() {
-        return Actor3;
+        return actor3;
     }
 
     public void setActor3(String actor3) {
-        Actor3 = actor3;
+        this.actor3 = actor3;
     }
 
     @Override
@@ -132,21 +132,21 @@ public class SFMovies implements Serializable {
 
         SFMovies sfMovies = (SFMovies) o;
 
-        if (Actor1 != null ? !Actor1.equals(sfMovies.Actor1) : sfMovies.Actor1 != null) return false;
-        if (Actor2 != null ? !Actor2.equals(sfMovies.Actor2) : sfMovies.Actor2 != null) return false;
-        if (Actor3 != null ? !Actor3.equals(sfMovies.Actor3) : sfMovies.Actor3 != null) return false;
-        if (Director != null ? !Director.equals(sfMovies.Director) : sfMovies.Director != null) return false;
-        if (Distributor != null ? !Distributor.equals(sfMovies.Distributor) : sfMovies.Distributor != null)
+        if (actor1 != null ? !actor1.equals(sfMovies.actor1) : sfMovies.actor1 != null) return false;
+        if (actor2 != null ? !actor2.equals(sfMovies.actor2) : sfMovies.actor2 != null) return false;
+        if (actor3 != null ? !actor3.equals(sfMovies.actor3) : sfMovies.actor3 != null) return false;
+        if (director != null ? !director.equals(sfMovies.director) : sfMovies.director != null) return false;
+        if (distributor != null ? !distributor.equals(sfMovies.distributor) : sfMovies.distributor != null)
             return false;
-        if (FunFacts != null ? !FunFacts.equals(sfMovies.FunFacts) : sfMovies.FunFacts != null) return false;
-        if (Locations != null ? !Locations.equals(sfMovies.Locations) : sfMovies.Locations != null) return false;
-        if (ProductionCompany != null ? !ProductionCompany.equals(sfMovies.ProductionCompany) : sfMovies.ProductionCompany != null)
-            return false;
-        if (ReleaseYear != null ? !ReleaseYear.equals(sfMovies.ReleaseYear) : sfMovies.ReleaseYear != null)
-            return false;
-        if (Title != null ? !Title.equals(sfMovies.Title) : sfMovies.Title != null) return false;
-        if (Writer != null ? !Writer.equals(sfMovies.Writer) : sfMovies.Writer != null) return false;
+        if (funFacts != null ? !funFacts.equals(sfMovies.funFacts) : sfMovies.funFacts != null) return false;
         if (!id.equals(sfMovies.id)) return false;
+        if (locations != null ? !locations.equals(sfMovies.locations) : sfMovies.locations != null) return false;
+        if (productionCompany != null ? !productionCompany.equals(sfMovies.productionCompany) : sfMovies.productionCompany != null)
+            return false;
+        if (releaseYear != null ? !releaseYear.equals(sfMovies.releaseYear) : sfMovies.releaseYear != null)
+            return false;
+        if (title != null ? !title.equals(sfMovies.title) : sfMovies.title != null) return false;
+        if (writer != null ? !writer.equals(sfMovies.writer) : sfMovies.writer != null) return false;
 
         return true;
     }
@@ -154,17 +154,17 @@ public class SFMovies implements Serializable {
     @Override
     public int hashCode() {
         int result = id.hashCode();
-        result = 31 * result + (Title != null ? Title.hashCode() : 0);
-        result = 31 * result + (ReleaseYear != null ? ReleaseYear.hashCode() : 0);
-        result = 31 * result + (Locations != null ? Locations.hashCode() : 0);
-        result = 31 * result + (FunFacts != null ? FunFacts.hashCode() : 0);
-        result = 31 * result + (ProductionCompany != null ? ProductionCompany.hashCode() : 0);
-        result = 31 * result + (Distributor != null ? Distributor.hashCode() : 0);
-        result = 31 * result + (Director != null ? Director.hashCode() : 0);
-        result = 31 * result + (Writer != null ? Writer.hashCode() : 0);
-        result = 31 * result + (Actor1 != null ? Actor1.hashCode() : 0);
-        result = 31 * result + (Actor2 != null ? Actor2.hashCode() : 0);
-        result = 31 * result + (Actor3 != null ? Actor3.hashCode() : 0);
+        result = 31 * result + (title != null ? title.hashCode() : 0);
+        result = 31 * result + (releaseYear != null ? releaseYear.hashCode() : 0);
+        result = 31 * result + (locations != null ? locations.hashCode() : 0);
+        result = 31 * result + (funFacts != null ? funFacts.hashCode() : 0);
+        result = 31 * result + (productionCompany != null ? productionCompany.hashCode() : 0);
+        result = 31 * result + (distributor != null ? distributor.hashCode() : 0);
+        result = 31 * result + (director != null ? director.hashCode() : 0);
+        result = 31 * result + (writer != null ? writer.hashCode() : 0);
+        result = 31 * result + (actor1 != null ? actor1.hashCode() : 0);
+        result = 31 * result + (actor2 != null ? actor2.hashCode() : 0);
+        result = 31 * result + (actor3 != null ? actor3.hashCode() : 0);
         return result;
     }
 
@@ -172,17 +172,17 @@ public class SFMovies implements Serializable {
     public String toString() {
         return "SFMovies{" +
                 "id=" + id +
-                ", Title='" + Title + '\'' +
-                ", ReleaseYear='" + ReleaseYear + '\'' +
-                ", Locations='" + Locations + '\'' +
-                ", FunFacts='" + FunFacts + '\'' +
-                ", ProductionCompany='" + ProductionCompany + '\'' +
-                ", Distributor='" + Distributor + '\'' +
-                ", Director='" + Director + '\'' +
-                ", Writer='" + Writer + '\'' +
-                ", Actor1='" + Actor1 + '\'' +
-                ", Actor2='" + Actor2 + '\'' +
-                ", Actor3='" + Actor3 + '\'' +
+                ", title='" + title + '\'' +
+                ", releaseYear='" + releaseYear + '\'' +
+                ", locations='" + locations + '\'' +
+                ", funFacts='" + funFacts + '\'' +
+                ", productionCompany='" + productionCompany + '\'' +
+                ", distributor='" + distributor + '\'' +
+                ", director='" + director + '\'' +
+                ", writer='" + writer + '\'' +
+                ", actor1='" + actor1 + '\'' +
+                ", actor2='" + actor2 + '\'' +
+                ", actor3='" + actor3 + '\'' +
                 '}';
     }
 }
