@@ -16,8 +16,13 @@ public class MoviesControler {
     @Autowired
     MoviesService moviesService;
 
+    @RequestMapping(value = "/")
+    public String goHomePage() {
+        return "home";
+    }
+
     @RequestMapping(value = "displayMoviesList")
-    public String moviesList(SFMovies sfMovies, Model model) {
+    public String displayMoviesList(SFMovies sfMovies, Model model) {
         model.addAttribute("moviesList", this.moviesService.findMoives(sfMovies));
         return "home";
     }

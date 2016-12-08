@@ -25,7 +25,12 @@ public class MovieControllerTest {
     private MockMvc mvc;
 
     @Test
-    public void testFindMovies() throws Exception {
+    public void testDisplayMoviesList() throws Exception {
         this.mvc.perform(MockMvcRequestBuilders.get("/displayMoviesList?actor1=sidd")).andExpect(status().isOk()).andExpect(content().string(containsString("Sidd")));
+    }
+
+    @Test
+    public void testGoHomePage() throws Exception{
+        this.mvc.perform(MockMvcRequestBuilders.get("/")).andExpect(status().isOk());
     }
 }

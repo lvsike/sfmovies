@@ -27,16 +27,43 @@ public class MoviesServiceTest {
     }
 
     @Test
-    public void testMoviesQueryByEmptyObject() throws Exception{
+    public void testMoviesQueryByEmptyObject() throws Exception {
         SFMovies sfMovies = new SFMovies();
         List<SFMovies> sfMoviesList = moviesService.findMoives(sfMovies);
         Assert.assertTrue(sfMoviesList.size() > 0);
     }
 
     @Test
-    public void testMoviesQueryByNormalObject() throws Exception{
+    public void testMoviesQueryBySpecialCharacter() throws Exception {
         SFMovies sfMovies = new SFMovies();
-        sfMovies.setActor1("sidd");
+        sfMovies.setTitle("!@#$%^&*()'");
+        sfMovies.setFunFacts("!@#$%^&*()'");
+        sfMovies.setProductionCompany("!@#$%^&*()'");
+        sfMovies.setDistributor("!@#$%^&*()'");
+        sfMovies.setReleaseYear("!@#$%^&*()'");
+        sfMovies.setDirector("!@#$%^&*()'");
+        sfMovies.setWriter("!@#$%^&*()'");
+        sfMovies.setActor1("!@#$%^&*()'");
+        sfMovies.setActor2("!@#$%^&*()'");
+        sfMovies.setActor3("!@#$%^&*()'");
+        List<SFMovies> sfMoviesList = moviesService.findMoives(sfMovies);
+        Assert.assertTrue(sfMoviesList.size() == 0);
+    }
+
+    @Test
+    public void testMoviesQueryByNormalObject() throws Exception {
+        SFMovies sfMovies = new SFMovies();
+        sfMovies.setTitle("Smile");
+        sfMovies.setReleaseYear("1997");
+        sfMovies.setLocations("1100 California Street");
+        sfMovies.setFunFacts("Grace");
+        sfMovies.setProductionCompany("Paramount");
+        sfMovies.setDistributor("Paramount");
+        sfMovies.setDirector("Keith");
+        sfMovies.setWriter("Keith Samples & Kevin Meyer");
+        sfMovies.setActor1("Greg");
+        sfMovies.setActor2("Lauren");
+        sfMovies.setActor3("");
         List<SFMovies> sfMoviesList = moviesService.findMoives(sfMovies);
         Assert.assertTrue(sfMoviesList.size() > 0);
     }

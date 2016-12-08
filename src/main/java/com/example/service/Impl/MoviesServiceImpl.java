@@ -32,43 +32,47 @@ public class MoviesServiceImpl implements MoviesService {
                     List<Predicate> predicateList = new ArrayList<>();
                     if (sfMovies.getTitle() != null && sfMovies.getTitle().trim().length() > 0) {
                         Path<String> namePath = root.get("title");
-                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getTitle())));
+                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getTitle().trim())));
                     }
                     if (sfMovies.getReleaseYear() != null && sfMovies.getReleaseYear().trim().length() > 0) {
                         Path<String> namePath = root.get("releaseYear");
-                        predicateList.add(criteriaBuilder.equal(namePath, sfMovies.getReleaseYear()));
+                        predicateList.add(criteriaBuilder.equal(namePath, sfMovies.getReleaseYear().trim()));
                     }
                     if (sfMovies.getLocations() != null && sfMovies.getLocations().trim().length() > 0) {
                         Path<String> namePath = root.get("locations");
-                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getLocations())));
+                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getLocations().trim())));
                     }
                     if (sfMovies.getFunFacts() != null && sfMovies.getFunFacts().trim().length() > 0) {
                         Path<String> namePath = root.get("funFacts");
-                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getFunFacts())));
+                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getFunFacts().trim())));
                     }
                     if (sfMovies.getProductionCompany() != null && sfMovies.getProductionCompany().trim().length() > 0) {
                         Path<String> namePath = root.get("productionCompany");
-                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getProductionCompany())));
+                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getProductionCompany().trim())));
                     }
                     if (sfMovies.getDistributor() != null && sfMovies.getDistributor().trim().length() > 0) {
                         Path<String> namePath = root.get("distributor");
-                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getDistributor())));
+                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getDistributor().trim())));
                     }
                     if (sfMovies.getDirector() != null && sfMovies.getDirector().trim().length() > 0) {
                         Path<String> namePath = root.get("director");
-                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getDirector())));
+                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getDirector().trim())));
+                    }
+                    if (sfMovies.getWriter() != null && sfMovies.getWriter().trim().length() > 0) {
+                        Path<String> namePath = root.get("writer");
+                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getWriter().trim())));
                     }
                     if (sfMovies.getActor1() != null && sfMovies.getActor1().trim().length() > 0) {
                         Path<String> namePath = root.get("actor1");
-                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getActor1())));
+                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getActor1().trim())));
                     }
                     if (sfMovies.getActor2() != null && sfMovies.getActor2().trim().length() > 0) {
                         Path<String> namePath = root.get("actor2");
-                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getActor2())));
+                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getActor2().trim())));
                     }
                     if (sfMovies.getActor3() != null && sfMovies.getActor3().trim().length() > 0) {
                         Path<String> namePath = root.get("actor3");
-                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getActor3())));
+                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getActor3().trim())));
                     }
                     criteriaQuery.where(predicateList.toArray(new Predicate[predicateList.size()]));
                     return null;
