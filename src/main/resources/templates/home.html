@@ -1,20 +1,129 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.2.0/css/bootstrap.min.css"/>
 </head>
 <body>
-<form action="#" th:action="@{/displayMoviesList}" method="post">
-    <div>
-        <label>Title</label>
-        <input type="text" id="title" name="title"/>
-        <label>Locations</label>
-        <input type="text" id="locations" name="locations"/>
-        <label>Actor1</label>
-        <input type="text" id="actor1" name="actor1"/>
-        <button type="submit" id="query">query</button>
-        <table>
+<form class="form-horizontal" action="#" th:action="@{/displayMoviesList}" method="post">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><h4>Movie Infomation</h4></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <label for="title" class="col-sm-4 control-label">Title:</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="title" name="title" placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <label for="releaseYear" class="col-sm-4 control-label">Release Year:</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="releaseYear" name="releaseYear"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <label for="Locations" class="col-sm-4 control-label">Locations:</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="locations" name="locations"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <label for="funFacts" class="col-sm-4 control-label">Fun Facts:</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="funFacts" name="funFacts"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <label for="productionCompany" class="col-sm-4 control-label">Production Company:</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="productionCompany" name="productionCompany"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <label for="distributor" class="col-sm-4 control-label">Distributor:</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="distributor" name="distributor"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <label for="director" class="col-sm-4 control-label">Director:</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="director" name="director" placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <label for="writer" class="col-sm-4 control-label">Writer:</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="writer" name="writer" placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <label for="actor1" class="col-sm-4 control-label">Actor1:</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="actor1" name="actor1" placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <label for="actor2" class="col-sm-4 control-label">Actor2:</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="actor2" name="actor2" placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <label for="actor3" class="col-sm-4 control-label">Actor3:</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="actor3" name="actor3" placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <button type="submit" id="query" class="btn btn-default">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="table">
             <thead>
             <tr>
-                <th>ID</th>
+                <th>#</th>
                 <th>Title</th>
                 <th>Release Year</th>
                 <th>Locations</th>
