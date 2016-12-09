@@ -10,7 +10,7 @@ http://115.159.29.176/title/{title}/locations/{locations}
 
 You can access this API, which follows the REST model, to get the information that meets the conditions in JSON format.
 for example, if you want to know if there is a film has a title contains 'smile' near the 'Hills Brothers Plaza', you can find by
-access [http://115.159.29.176/title/smile/locations/Hills Brothers Plaza](http://115.159.29.176/title/smile/locations/Hills%20Brothers%20Plaza),then you will get the following information:
+access '[http://115.159.29.176/title/smile/locations/Hills Brothers Plaza](http://115.159.29.176/title/smile/locations/Hills%20Brothers%20Plaza),then you will get the following information:
 ```json
 [
     {
