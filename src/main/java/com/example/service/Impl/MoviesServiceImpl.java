@@ -36,7 +36,7 @@ public class MoviesServiceImpl implements MoviesService {
                     }
                     if (sfMovies.getReleaseYear() != null && sfMovies.getReleaseYear().trim().length() > 0) {
                         Path<String> namePath = root.get("releaseYear");
-                        predicateList.add(criteriaBuilder.equal(namePath, sfMovies.getReleaseYear().trim()));
+                        predicateList.add(criteriaBuilder.like(namePath, String.format("%%%s%%", sfMovies.getReleaseYear().trim())));
                     }
                     if (sfMovies.getLocations() != null && sfMovies.getLocations().trim().length() > 0) {
                         Path<String> namePath = root.get("locations");
