@@ -3,10 +3,11 @@
 - The user should be able to filter the view using ~~autocompletion~~ search.
 
 ## Demo
-[SFMovies Service](https://115.159.29.176:8443)
+[SFMovies Service](http://115.159.29.176)
 
 ## Restful Api
-https://115.159.29.176:8443/title/{title}/locations/{locations}
+http://115.159.29.176/title/{title}/locations/{locations}
+
 You can access this API, which follows the REST model, to get the information that meets the conditions in JSON format.
 ## Operating Environment && Technology Tools
 - JDK 1.8
