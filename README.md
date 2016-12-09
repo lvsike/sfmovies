@@ -5,7 +5,7 @@
 ## Demo
 [SFMovies Service](http://115.159.29.176)
 
-## Restful Api
+## REST Api
 http://115.159.29.176/title/{title}/locations/{locations}
 
 You can access this API, which follows the REST model, to get the information that meets the conditions in JSON format.
